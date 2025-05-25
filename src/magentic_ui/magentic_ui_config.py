@@ -23,16 +23,18 @@ class ModelClientConfigs(BaseModel):
     action_guard: Optional[Union[ComponentModel, Dict[str, Any]]] = None
 
     default_client_config: ClassVar[Dict[str, Any]] = {
-        "provider": "OpenAIChatCompletionClient",
+        "provider": "OllamaClient",
         "config": {
-            "model": "gpt-4.1-2025-04-14",
+            "model": "huihui_ai/qwen2.5-abliterate:0.5b",
+            "base_url": "http://localhost:11434",
         },
         "max_retries": 10,
     }
     default_action_guard_config: ClassVar[Dict[str, Any]] = {
-        "provider": "OpenAIChatCompletionClient",
+        "provider": "OllamaClient",
         "config": {
-            "model": "gpt-4.1-nano-2025-04-14",
+            "model": "huihui_ai/qwen2.5-abliterate:0.5b",
+            "base_url": "http://localhost:11434",
         },
         "max_retries": 10,
     }
